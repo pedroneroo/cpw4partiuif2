@@ -58,11 +58,7 @@ npm run dev
 npm run build
 npm run preview
 # http://localhost:4173
-```
 
-> ⚠️ O Service Worker só ativa em produção (`npm run build`). Para testar PWA e instalação, use `npm run preview` ou hospede em HTTPS.
-
----
 
 ## 📁 Estrutura do projeto
 
@@ -152,15 +148,5 @@ Sempre disponível:
 - Modo de comparação entre cursos
 - Animações de página com Framer Motion
 - Testes unitários com Vitest + React Testing Library
-
----
-
-## 🔗 Links
-
-- **Repositório:** [github.com/seu-usuario/partiu-if](https://github.com/seu-usuario/partiu-if)
-- **Figma:** [Adicionar link do Figma aqui]
-- **Site IFMS:** [ifms.edu.br](https://www.ifms.edu.br)
-
----
 
 *Projeto desenvolvido para a disciplina Construção de Páginas Web IV · IFMS · Prof.ª Milena Alegre*
