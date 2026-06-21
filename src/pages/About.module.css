@@ -1,0 +1,201 @@
+.page { padding-bottom: 80px; }
+
+.hero {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 60%, #0F3460 100%);
+  color: white;
+  padding: 64px 0 80px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 48px;
+  background: var(--color-bg);
+  clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.heroTitle span { color: var(--color-yellow); }
+
+.heroSub {
+  font-size: 1.05rem;
+  opacity: 0.8;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.section { padding: 48px 0; border-bottom: 1px solid var(--color-border); }
+.section:last-of-type { border-bottom: none; }
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+/* MISSÃO */
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+}
+
+.missionGrid p {
+  color: var(--color-text-soft);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 0.97rem;
+}
+
+.missionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 180px;
+}
+
+.missionStat {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.missionStat strong {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-green);
+  line-height: 1;
+}
+
+.missionStat span { font-size: 0.82rem; color: var(--color-text-soft); }
+
+/* VALORES */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.valueCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.valueIcon { font-size: 2.2rem; }
+
+.valueCard h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.valueCard p { font-size: 0.85rem; color: var(--color-text-soft); line-height: 1.6; }
+
+/* TIMELINE */
+.timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 88px; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 80px 20px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.timelineYear {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-green);
+  text-align: right;
+}
+
+.timelineDot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--color-green);
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-green);
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineContent {
+  font-size: 0.92rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+/* CTA */
+.ctaSection {
+  text-align: center;
+  padding: 64px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ctaSection h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.ctaSection p { color: var(--color-text-soft); margin-bottom: 8px; }
+
+@media (max-width: 900px) {
+  .valuesGrid { grid-template-columns: 1fr 1fr; }
+  .missionGrid { grid-template-columns: 1fr; }
+  .missionCard { flex-direction: row; }
+}
+
+@media (max-width: 600px) {
+  .valuesGrid { grid-template-columns: 1fr 1fr; }
+  .missionCard { flex-direction: column; }
+  .timelineItem { grid-template-columns: 60px 16px 1fr; gap: 10px; }
+  .timeline::before { left: 68px; }
+}

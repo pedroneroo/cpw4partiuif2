@@ -1,0 +1,95 @@
+export const COURSES = [
+  {
+    id: 'info',
+    title: 'Técnico em Informática',
+    area: 'Tecnologia',
+    type: 'Integrado',
+    duration: '3 anos',
+    shift: 'Integral',
+    campus: 'Aquidauana',
+    description: 'Forme-se como técnico em informática com foco em programação, redes e manutenção de hardware. O curso integra o Ensino Médio ao técnico, preparando você para o mercado ou para o ENEM.',
+    topics: ['Programação Web', 'Banco de Dados', 'Redes de Computadores', 'Manutenção de Hardware', 'Sistemas Operacionais'],
+    profile: 'Pessoas com interesse em tecnologia, lógica e resolução de problemas.',
+    color: '#2563EB',
+    icon: '💻',
+    vacancies: 40
+  },
+  {
+    id: 'agro',
+    title: 'Técnico em Agropecuária',
+    area: 'Agropecuária',
+    type: 'Integrado',
+    duration: '3 anos',
+    shift: 'Integral',
+    campus: 'Aquidauana',
+    description: 'Aprenda técnicas modernas de produção animal e vegetal aliadas ao manejo sustentável. Um dos cursos mais tradicionais do IFMS, com infraestrutura completa e campo experimental.',
+    topics: ['Bovinocultura', 'Olericultura', 'Solos e Irrigação', 'Mecanização Agrícola', 'Agroecologia'],
+    profile: 'Quem tem interesse no campo, meio ambiente e produção sustentável de alimentos.',
+    color: '#16A34A',
+    icon: '🌱',
+    vacancies: 40
+  },
+  {
+    id: 'admin',
+    title: 'Técnico em Administração',
+    area: 'Gestão',
+    type: 'Concomitante / Subsequente',
+    duration: '2 anos',
+    shift: 'Noturno',
+    campus: 'Aquidauana',
+    description: 'Desenvolva habilidades em gestão empresarial, finanças e recursos humanos. Ideal para quem já está no mercado de trabalho ou quer empreender.',
+    topics: ['Gestão Financeira', 'Marketing', 'Logística', 'Legislação Trabalhista', 'Empreendedorismo'],
+    profile: 'Pessoas que buscam crescimento profissional em empresas ou querem abrir o próprio negócio.',
+    color: '#7C3AED',
+    icon: '📊',
+    vacancies: 35
+  },
+  {
+    id: 'edificacoes',
+    title: 'Técnico em Edificações',
+    area: 'Construção Civil',
+    type: 'Integrado',
+    duration: '3 anos',
+    shift: 'Integral',
+    campus: 'Aquidauana',
+    description: 'Aprenda a projetar, executar e fiscalizar obras. O técnico em edificações tem papel fundamental na construção civil e em projetos de infraestrutura.',
+    topics: ['Desenho Técnico', 'AutoCAD', 'Topografia', 'Instalações Elétricas', 'Materiais de Construção'],
+    profile: 'Quem tem interesse em arquitetura, engenharia e construção.',
+    color: '#EA580C',
+    icon: '🏗️',
+    vacancies: 35
+  },
+  {
+    id: 'alimentos',
+    title: 'Técnico em Alimentos',
+    area: 'Alimentos',
+    type: 'Integrado',
+    duration: '3 anos',
+    shift: 'Integral',
+    campus: 'Aquidauana',
+    description: 'Atue na indústria alimentícia controlando processos de produção, qualidade e segurança dos alimentos. Área em crescimento com forte demanda no Mato Grosso do Sul.',
+    topics: ['Microbiologia de Alimentos', 'Controle de Qualidade', 'Boas Práticas de Fabricação', 'Tecnologia de Laticínios', 'Análise Sensorial'],
+    profile: 'Pessoas curiosas sobre ciência dos alimentos, química e saúde pública.',
+    color: '#D97706',
+    icon: '🍃',
+    vacancies: 30
+  },
+  {
+    id: 'meio-ambiente',
+    title: 'Técnico em Meio Ambiente',
+    area: 'Meio Ambiente',
+    type: 'Integrado',
+    duration: '3 anos',
+    shift: 'Integral',
+    campus: 'Aquidauana',
+    description: 'Forme-se para atuar na preservação, recuperação e monitoramento ambiental. Com o Pantanal no seu quintal, o IFMS Aquidauana é o lugar ideal para esse curso.',
+    topics: ['Ecologia', 'Gestão de Resíduos', 'Legislação Ambiental', 'Monitoramento Hídrico', 'Educação Ambiental'],
+    profile: 'Quem ama a natureza e quer proteger o Pantanal e o Cerrado.',
+    color: '#059669',
+    icon: '🌿',
+    vacancies: 35
+  }
+]
+
+export const AREAS = ['Todos', ...new Set(COURSES.map(c => c.area))]
+export const TYPES = ['Todos', ...new Set(COURSES.map(c => c.type))]
